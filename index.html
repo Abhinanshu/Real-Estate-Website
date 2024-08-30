@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Website</title>
+    <link rel="stylesheet" href="real.css">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="logo">Dream Home <img class="dh" src="images/dh.png"></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#listings">Listings</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="login page/index.html">Login</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+                <div class="line4"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search houses or flats...">
+        <select id="locationFilter">
+            <option value="">All Locations</option>
+            <option value="Noida">Noida</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Gurgaon">Gurgaon</option>
+        </select>
+        <select id="priceFilter">
+            <option value="">All Prices</option>
+            <option value="0-50">Up to ₹50 Lakhs</option>
+            <option value="50-100">₹50 Lakhs - ₹1 Crore</option>
+            <option value="100-200">₹1 Crore - ₹2 Crores</option>
+            <option value="200+">₹2 Crores and above</option>
+        </select>
+        <button onclick="filterResults()">Search</button>
+    </div>
+    <div id="resultsContainer">
+        
+    </div>
+
+    <section id="home" class="home">
+    </section>
+
+    <section id="listings" class="listings">
+        <h2>Property Listings</h2>
+        <div class="property-grid">
+            <div class="property">
+                <img src="images/property1.jpg.jpg" alt="Property 1">
+                <h3>Family House</h3>
+                <p>4 beds | 3 baths | 2500 sqft</p>
+                <p>Location-Noida</p>
+                <a href="view details/index.html" class="btn" id="viewDetailsButton">View Details</a>
+            </div>
+            <div class="property">
+                <img src="images/property2.jpg.jpg" alt="Property 2">
+                <h3>Modern Apartment</h3>
+                <p>2 beds | 2 baths | 1200 sqft</p>
+                <p>Location-Mumbai</p>
+                <a href="#property-detail" class="btn">View Details</a>
+            </div>
+            <div class="property">
+                <img src="images/property3.jpg" alt="Property 2">
+                <h3>4 BHK Modern Flats for rents</h3>
+                <p>4 beds | 4 baths | 1700 sqft</p>
+                <p>Location-Delhi</p>
+                <a href="#property-detail" class="btn">View Details</a>
+            </div>
+            <div class="property">
+                <img src="images/property4.jpg" alt="Property 2">
+                <h3>Modern Apartment</h3>
+                <p>2 beds | 2 baths | 1200 sqft</p>
+                <p>Location-Chennai</p>
+                <a href="#property-detail" class="btn">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 RealEstate. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><img src="images/facebook-circle-logo-24.png" alt="Facebook"></a>
+            <a href="#"><img src="images/twitter-logo-24.png" alt="Twitter"></a>
+            <a href="#"><img src="images/instagram-logo-24.png" alt="Instagram"></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

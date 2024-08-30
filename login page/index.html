@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Sign Up Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div id="login-form" class="form-active">
+                <h2>Login</h2>
+                <form action="/login" method="post">
+                    <div class="input-group">
+                        <label for="login-username">Username</label>
+                        <input type="text" id="login-username" name="username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" required>
+                    </div>
+                    <button type="submit" class="form-button">Login</button>
+                    <p>Don't have an account? <a href="javascript:void(0);" onclick="toggleForms()">Sign up</a></p>
+                </form>
+            </div>
+
+            <div id="signup-form" class="form-hidden">
+                <h2>Sign Up</h2>
+                <form action="/signup" method="post">
+                    <div class="input-group">
+                        <label for="signup-username">Username</label>
+                        <input type="text" id="signup-username" name="username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" name="password" required>
+                    </div>
+                    <button type="submit" class="form-button">Sign Up</button>
+                    <p>Already have an account? <a href="javascript:void(0);" onclick="toggleForms()">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleForms() {
+            var loginForm = document.getElementById('login-form');
+            var signupForm = document.getElementById('signup-form');
+
+            if (loginForm.classList.contains('form-active')) {
+                loginForm.classList.remove('form-active');
+                loginForm.classList.add('form-hidden');
+                signupForm.classList.remove('form-hidden');
+                signupForm.classList.add('form-active');
+            } else {
+                loginForm.classList.remove('form-hidden');
+                loginForm.classList.add('form-active');
+                signupForm.classList.remove('form-active');
+                signupForm.classList.add('form-hidden');
+            }
+        }
+    </script>
+</body>
+</html>
